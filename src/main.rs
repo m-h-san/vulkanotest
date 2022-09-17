@@ -64,6 +64,7 @@ fn main() {
     let extensions = InstanceExtensions {
         ext_debug_utils: true,
         // FIXME: khr_win32_surface: true, Windowsでは必須だが残念ながらどうサポートされているExtensionを取得できるかわからない。
+        // 多分WindowsでしかこのExtensionは取得できないのでWindows版ビルドのみ含めるようにすればOK。
         khr_surface: true,
         ext_debug_report: true,
         ..vulkano_win::required_extensions()
